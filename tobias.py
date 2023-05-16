@@ -2,7 +2,7 @@ import datetime
 # Tobias Class file
 class Tobias:
 	name = "Tobias"
-	version = 2.0
+	version = 0.2
 	mk = 2
 	location = "Fredericksburg"
 	creator = "Tavion Britt"
@@ -34,7 +34,7 @@ class Tobias:
 
 # Returns birthday
 	def getBday(self):
-		return self.bday.strftime("%B %d %Y")
+		return self.bday.strftime("%B %d, %Y")
 
 # Returns age
 	def getAge(self):
@@ -58,4 +58,5 @@ class Tobias:
 		else:
 			return str(years) + " years old"
 
-# 93760 22995
+# t = Tobias()
+# print(t.getAge())
