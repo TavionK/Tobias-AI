@@ -42,16 +42,23 @@ def age_():
 
 # ADVANCED SKILLS -----------------------------------------------------------------------
 
-# get weather in Tobias location
-def localWeather_():
-	url="http://api.openweathermap.org/data/2.5/weather?q=Fredericksburg&units=imperial&appid=da1b3912cd52cc458f77d90cae5c2986"
-	res=requests.get(url)
-	data=res.json()
-	temp=data['main']['temp']
-	return "The weather in Fredericksburg is " +(str(temp))
+# get weather in a specific location
+def weather_(*args):
+	if len(args) == 1:
+		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=da1b3912cd52cc458f77d90cae5c2986".format(args[0])
+		res=requests.get(url)
+		data=res.json()
+		temp=data['main']['temp']
+		return "The weather in " + args[0] + " is " + str(int(temp))
+	else:
+		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=da1b3912cd52cc458f77d90cae5c2986".format(t.getLoc())
+		res=requests.get(url)
+		data=res.json()
+		temp=data['main']['temp']
+		return "The weather in " + t.getLoc() + " is " + str(int(temp))
 
 
 # TESTING -------------------------------------------------------------------------------
 
 t = Tobias()
-print(localWeather_())
+print(weather_("san francisco"))

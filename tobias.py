@@ -2,7 +2,7 @@ import datetime
 # Tobias Class file
 class Tobias:
 	name = "Tobias"
-	version = 0.2
+	version = 0.4
 	mk = 2
 	location = "Fredericksburg"
 	creator = "Tavion Britt"
