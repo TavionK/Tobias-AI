@@ -49,7 +49,7 @@ class Tobias:
 
 		# if less than a month and a year calculate the days
 		if years < 1 and months < 1:
-			days = self.bday.day - datetime.datetime.today().day
+			days = datetime.datetime.today().day - self.bday.day
 			return str(days) + " days old"
 		# calculate age if under a year but over a month
 		elif years < 1 and months >= 1:

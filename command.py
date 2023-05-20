@@ -41,5 +41,5 @@ def command_():
 
 # TESTING -------------------------------------------------------------------------------
 
-query = "tobias what is the weather"
+query = "tobias what is your age"
 print(command_())
