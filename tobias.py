@@ -57,6 +57,3 @@ class Tobias:
 		# calculate years and months if year is over over 1
 		else:
 			return str(years) + " years old"
-
-# t = Tobias()
-# print(t.getAge())

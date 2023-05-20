@@ -1,11 +1,10 @@
 # IMPORTS -------------------------------------------------------------------------------
 import skills
-from tobias import Tobias
 
 # FIND SKILL ---------------------------------------------------------------------------
 # All inputs will be transformed to lowercase
 
-def command_():
+def command_(query):
 	if 'tobias' in query and 'time' in query:
 		return skills.time_()
 
@@ -37,9 +36,6 @@ def command_():
 
 	elif 'tobias' in query and 'weather' in query or 'temperature' in query:
 		return skills.weather_()
-
-
-# TESTING -------------------------------------------------------------------------------
-
-query = "tobias what is your age"
-print(command_())
+	
+	else:
+		pass
