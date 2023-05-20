@@ -57,8 +57,4 @@ def weather_(*args):
 		temp=data['main']['temp']
 		return "The weather in " + t.getLoc() + " is " + str(int(temp))
 
-
-# TESTING -------------------------------------------------------------------------------
-
 t = Tobias()
-print(weather_("san francisco"))
