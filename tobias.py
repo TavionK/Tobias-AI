@@ -1,12 +1,22 @@
 import datetime
 # Tobias Class file
 class Tobias:
+	# Default values for Tobias
 	name = "Tobias"
 	version = 0.4
 	mk = 2
 	location = "Fredericksburg"
 	creator = "Tavion Britt"
 	bday = datetime.datetime(2023,5,15)
+	
+	# Read in from configuration file which can be edited
+	with open("config.txt", "r") as f:
+		v = f.readline()
+		ver = v.split(": ")
+		version = ver[1]
+		l = f.readline()
+		loc = l.split(": ")
+		location = loc[1]
 
 # Init method
 	def __init__(self):

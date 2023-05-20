@@ -22,7 +22,7 @@ def date_():
 
 # gets the version
 def version_():
-	return "This is Tobias Mark " + str(t.getMk()) + " version " + str(t.getVersion())
+	return "This is Tobias Mark " + str(t.getMk())
 
 # gets the name
 def name_():
