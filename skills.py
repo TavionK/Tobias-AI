@@ -4,6 +4,8 @@
 import datetime
 # import requests
 import requests
+# import time
+import time
 
 
 # import tobias class
@@ -57,4 +59,53 @@ def weather_(*args):
 		temp=data['main']['temp']
 		return "The weather in " + t.getLoc() + " is " + str(int(temp))
 
+# gets a joke
+def joke_():
+	url = "https://official-joke-api.appspot.com/random_joke"
+	res=requests.get(url)
+	data=res.json()
+	setup =data['setup']
+	punchline=data['punchline']
+
+	return str(setup) + "       " + str(punchline)
+
 t = Tobias()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# spacer

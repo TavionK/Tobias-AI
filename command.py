@@ -37,5 +37,5 @@ def command_(query):
 	elif 'tobias' in query and 'weather' in query or 'temperature' in query:
 		return skills.weather_()
 	
-	else:
-		pass
+	if 'tobias' in query and 'joke' in query:
+		return skills.joke_()
