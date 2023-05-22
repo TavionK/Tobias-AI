@@ -4,9 +4,6 @@
 import datetime
 # import requests
 import requests
-# import time
-import time
-
 
 # import tobias class
 from tobias import Tobias
