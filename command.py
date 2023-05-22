@@ -39,3 +39,6 @@ def command_(query):
 	
 	if 'tobias' in query and 'joke' in query:
 		return skills.joke_()
+
+	else:
+		return "no valid query"

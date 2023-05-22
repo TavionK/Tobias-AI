@@ -13,7 +13,7 @@ from tobias import Tobias
 
 # tell the current time
 def time_():
-	return "The current time is " + datetime.datetime.now().strftime("%I:%M")
+	return "The current time is " + datetime.datetime.now().strftime("%I:%M %p")
 
 # tell the date
 def date_():
@@ -64,7 +64,7 @@ def joke_():
 	setup =data['setup']
 	punchline=data['punchline']
 
-	return str(setup) + "       " + str(punchline)
+	return str(setup) + "            " + str(punchline)
 
 t = Tobias()
 
