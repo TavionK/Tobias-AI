@@ -5,7 +5,7 @@ class Tobias:
 	name = "Tobias"
 	version = 0.4
 	mk = 2
-	location = "Fredericksburg"
+	location = "Woodbridge"
 	creator = "Tavion Britt"
 	bday = datetime.datetime(2023,5,15)
 	
