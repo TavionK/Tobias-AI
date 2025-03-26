@@ -64,8 +64,8 @@ To trigger each skill, include the corresponding keyword(s) in your query:
 
 Tobias uses the following APIs:
 
-- OpenWeatherMap: Provides real-time weather information for the weather-related skills.
-- Official Joke API: Fetches random jokes for the joke-telling skill.
+- [OpenWeatherMap](https://openweathermap.org/api): Provides real-time weather information for the weather-related skills.
+- [Official Joke API](https://github.com/15Dkatz/official_joke_api): Fetches random jokes for the joke-telling skill.
 
 ## Future Improvements
 
