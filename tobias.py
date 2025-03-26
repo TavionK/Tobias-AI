@@ -5,7 +5,7 @@ class Tobias:
 	name = "Tobias"
 	version = 0.4
 	mk = 2
-	location = "Woodbridge"
+	location = "Washington DC"
 	creator = "Tavion Britt"
 	bday = datetime.datetime(2023,5,15)
 	
@@ -13,10 +13,13 @@ class Tobias:
 	with open("config.txt", "r") as f:
 		v = f.readline()
 		ver = v.split(": ")
-		version = ver[1]
+		if len(ver) > 1:
+			version = ver[1]
 		l = f.readline()
 		loc = l.split(": ")
-		location = loc[1]
+		# if loc[1] not empty set location to loc[1]
+		if len(loc) > 1:
+			location = loc[1]
 
 # Init method
 	def __init__(self):
