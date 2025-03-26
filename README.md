@@ -60,6 +60,13 @@ To trigger each skill, include the corresponding keyword(s) in your query:
 
 - Joke Telling: Include "joke" (e.g., "Tobias, tell me a joke.").
 
+## Acknowledgements
+
+Tobias uses the following APIs:
+
+- OpenWeatherMap: Provides real-time weather information for the weather-related skills.
+- Official Joke API: Fetches random jokes for the joke-telling skill.
+
 ## Future Improvements
 
 - Implement a GUI or web-based interface.
