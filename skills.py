@@ -50,16 +50,12 @@ def weather_(*args):
 		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}".format(args[0], OPENWEATHER_API_KEY)
 		res=requests.get(url)
 		data=res.json()
-		print(data)
-		print("Key loaded:", OPENWEATHER_API_KEY)
 		temp=data['main']['temp']
 		return "The weather in " + args[0] + " is " + str(int(temp))
 	else:
 		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}".format(t.getLoc(), OPENWEATHER_API_KEY)
 		res=requests.get(url)
 		data=res.json()
-		print(data)
-		print("Key loaded:", OPENWEATHER_API_KEY)
 		temp=data['main']['temp']
 		return "The weather in " + t.getLoc() + " is " + str(int(temp))
 
