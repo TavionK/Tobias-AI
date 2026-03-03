@@ -18,7 +18,7 @@ def speak_(query):
 if __name__ == '__main__':
 
 	while True:
-		# for now take query in as a text input on terminal
+		# Take input from the user
 		print('please enter query')
 		# query = getQuery_().lower()
 		# query = input().lower()

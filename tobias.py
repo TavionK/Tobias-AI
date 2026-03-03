@@ -9,7 +9,7 @@ class Tobias:
 	creator = "Tavion Britt"
 	bday = datetime.datetime(2023,5,15)
 	
-	# Read in from configuration file which can be edited
+	# Read in from the config.txt file
 	with open("config.txt", "r") as f:
 		v = f.readline()
 		ver = v.split(": ")
