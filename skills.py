@@ -1,5 +1,9 @@
 # IMPORTS ----------------------------------------------------------------------------
+import os
+from dotenv import load_dotenv
+load_dotenv()  # reads .env and loads the variables
 
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 # import datetime
 import datetime
 # import requests
@@ -7,7 +11,6 @@ import requests
 
 # import tobias class
 from tobias import Tobias
-
 
 # GENERIC SKILLS ----------------------------------------------------------------------
 
@@ -44,15 +47,19 @@ def age_():
 # get weather in a specific location
 def weather_(*args):
 	if len(args) == 1:
-		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=da1b3912cd52cc458f77d90cae5c2986".format(args[0])
+		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}".format(args[0], OPENWEATHER_API_KEY)
 		res=requests.get(url)
 		data=res.json()
+		print(data)
+		print("Key loaded:", OPENWEATHER_API_KEY)
 		temp=data['main']['temp']
 		return "The weather in " + args[0] + " is " + str(int(temp))
 	else:
-		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=da1b3912cd52cc458f77d90cae5c2986".format(t.getLoc())
+		url="http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}".format(t.getLoc(), OPENWEATHER_API_KEY)
 		res=requests.get(url)
 		data=res.json()
+		print(data)
+		print("Key loaded:", OPENWEATHER_API_KEY)
 		temp=data['main']['temp']
 		return "The weather in " + t.getLoc() + " is " + str(int(temp))
 
