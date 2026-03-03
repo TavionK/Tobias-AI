@@ -20,8 +20,6 @@ if __name__ == '__main__':
 	while True:
 		# Take input from the user
 		print('please enter query')
-		# query = getQuery_().lower()
-		# query = input().lower()
 		speak_(input().lower())
 
 
