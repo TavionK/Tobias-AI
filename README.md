@@ -20,17 +20,43 @@ Tobias can respond to the following requests:
 
 ## Usage
 
-Run Tobias using the following command:
+### 1. Get an OpenWeatherMap API Key
 
-`python3 main.py`
+Tobias requires an API key from OpenWeatherMap for weather functionality.
 
-Then, enter a command in the terminal to interact with Tobias.
+1. Create a free account at [openweathermap.org](https://openweathermap.org)
+2. Navigate to **API Keys** in your account dashboard
+3. Copy your API key — note that new keys can take up to 2 hours to activate
+
+### 2. Set Up Your Environment Variables
+
+1. Install the required `python-dotenv` package:
+   ```
+   pip install python-dotenv
+   ```
+
+2. Create a `.env` file in the project root:
+   ```
+   OPENWEATHER_API_KEY=your-api-key-here
+   ```
+
+   A `.env.example` file is included in the repo as a reference.
+
+   > ⚠️ Never commit your `.env` file to GitHub. It is already listed in `.gitignore`.
+
+### 3. Run Tobias
+
+```
+python3 main.py
+```
+
+Then enter a command in the terminal to interact with Tobias.
 
 ## How to Ask a Question
 
 To interact with Tobias, ensure that every query includes the word "Tobias", similar to a wake word like Siri or Alexa. For example:
 
-"Tobias, what’s the weather like today?"
+"Tobias, what's the weather like today?"
 
 "Tobias, tell me a joke."
 
@@ -42,11 +68,11 @@ To trigger each skill, include the corresponding keyword(s) in your query:
 
 - Current Time: Include "time" (e.g., "Tobias, what time is it?").
 
-- Current Date: Include "date" (e.g., "Tobias, what’s today’s date?").
+- Current Date: Include "date" (e.g., "Tobias, what's today's date?").
 
-- Version Information: Include "version" (e.g., "Tobias, what’s your version?").
+- Version Information: Include "version" (e.g., "Tobias, what's your version?").
 
-- Name Inquiry: Include "your name" (e.g., "Tobias, what’s your name?").
+- Name Inquiry: Include "your name" (e.g., "Tobias, what's your name?").
 
 - Creator Information: Include "creator" (e.g., "Tobias, who created you?").
 
@@ -54,9 +80,9 @@ To trigger each skill, include the corresponding keyword(s) in your query:
 
 - Age Inquiry: Include "age" (e.g., "Tobias, how old are you?").
 
-- Weather Information for Config.txt/Default Location: Include "weather" (e.g., "Tobias, what’s the weather like today?").
+- Weather Information for Config.txt/Default Location: Include "weather" (e.g., "Tobias, what's the weather like today?").
 
-- Weather Information for a Specific Location: Include "weather" and "in" followed by the location (e.g., "Tobias, what’s the weather in Los Angeles?").
+- Weather Information for a Specific Location: Include "weather" and "in" followed by the location (e.g., "Tobias, what's the weather in Los Angeles?").
 
 - Joke Telling: Include "joke" (e.g., "Tobias, tell me a joke.").
 
